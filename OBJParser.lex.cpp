@@ -569,17 +569,14 @@ char *OBJParsertext;
 //////////////////////////////////////////////////////////////////////////////////////
 // Copyright © Charalambos "Charis" Poullis, charalambos@poullis.org                //
 // http://www.poullis.org                                                           //
-// This work is under the Creative Commons Attribution-Noncommercial-Share          //
-// Alike 3.0 United States License:                                                 //
-// http://creativecommons.org/licenses/by-nc-sa/3.0/us/                             //
-////////////////////////////////////////////////////////////////////////////////////// 
+//////////////////////////////////////////////////////////////////////////////////////
 
 /* need this for the call to atof() below */
 #include <stdio.h>
 #include <math.h>
 #include "OBJParser.h"
 #include "OBJParser.yacc.hpp"
-#line 583 "OBJParser.lex.cpp"
+#line 580 "OBJParser.lex.cpp"
 
 #define INITIAL 0
 
@@ -761,10 +758,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 60 "scanner.l"
+#line 57 "scanner.l"
 
 
-#line 768 "OBJParser.lex.cpp"
+#line 765 "OBJParser.lex.cpp"
 
 	if ( !(yy_init) )
 		{
@@ -849,226 +846,226 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 62 "scanner.l"
+#line 59 "scanner.l"
 {;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 63 "scanner.l"
+#line 60 "scanner.l"
 {;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 64 "scanner.l"
+#line 61 "scanner.l"
 {;}
 	YY_BREAK
 case 4:
 /* rule 4 can match eol */
 YY_RULE_SETUP
-#line 65 "scanner.l"
+#line 62 "scanner.l"
 {return '\n';}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 66 "scanner.l"
+#line 63 "scanner.l"
 {return '/';}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 67 "scanner.l"
+#line 64 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.comment,OBJParsertext); return COMMENT;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 68 "scanner.l"
+#line 65 "scanner.l"
 {/*printf("%lf",(double)atof(OBJParsertext));*/OBJParserlval.number = atof(OBJParsertext); return NUMBER;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 69 "scanner.l"
+#line 66 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.vertex,OBJParsertext);return VERTEX;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 70 "scanner.l"
+#line 67 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.vertexTexture,OBJParsertext);return VERTEX_TEXTURE;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 71 "scanner.l"
+#line 68 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.vertexNormal,OBJParsertext);return VERTEX_NORMAL;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 72 "scanner.l"
+#line 69 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.parameterSpaceVertex,OBJParsertext);return PARAMETER_SPACE_VERTEX;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 73 "scanner.l"
+#line 70 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.degree,OBJParsertext);return DEGREE;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 74 "scanner.l"
+#line 71 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.basisMatrix,OBJParsertext);return BASIS_MATRIX;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 75 "scanner.l"
+#line 72 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.stepSize,OBJParsertext);return STEP_SIZE;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 76 "scanner.l"
+#line 73 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.curveOrSurfaceType,OBJParsertext);return CURVE_OR_SURFACE_TYPE;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 77 "scanner.l"
+#line 74 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.point,OBJParsertext);return POINT;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 78 "scanner.l"
+#line 75 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.line,OBJParsertext);return LINE;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 79 "scanner.l"
+#line 76 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.face,OBJParsertext);return FACE;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 80 "scanner.l"
+#line 77 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.curve,OBJParsertext);return CURVE;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 81 "scanner.l"
+#line 78 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.curve2D,OBJParsertext);return CURVE_2D;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 82 "scanner.l"
+#line 79 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.surface,OBJParsertext);return SURFACE;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 83 "scanner.l"
+#line 80 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.parameterValues,OBJParsertext);return PARAMETER_VALUES;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 84 "scanner.l"
+#line 81 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.outerTrimmingLoop,OBJParsertext);return OUTER_TRIMMING_LOOP;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 85 "scanner.l"
+#line 82 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.innerTrimmingLoop,OBJParsertext);return INNER_TRIMMING_LOOP;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 86 "scanner.l"
+#line 83 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.specialCurve,OBJParsertext);return SPECIAL_CURVE;}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 87 "scanner.l"
+#line 84 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.specialPoint,OBJParsertext);return SPECIAL_POINT;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 88 "scanner.l"
+#line 85 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.end,OBJParsertext);return END;}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 89 "scanner.l"
+#line 86 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval._connect,OBJParsertext);return CONNECT;}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 90 "scanner.l"
+#line 87 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.groupName,OBJParsertext);return GROUP_NAME;}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 91 "scanner.l"
+#line 88 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.smoothingGroup,OBJParsertext);return SMOOTHING_GROUP;}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 92 "scanner.l"
+#line 89 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.mergingGroup,OBJParsertext);return MERGING_GROUP;}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 93 "scanner.l"
+#line 90 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.objectName,OBJParsertext);return OBJECT_NAME;}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 94 "scanner.l"
+#line 91 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.bevelInterpolation,OBJParsertext);return BEVEL_INTERPOLATION;}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 95 "scanner.l"
+#line 92 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.colorInterpolation,OBJParsertext);return COLOR_INTERPOLATION;}
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 96 "scanner.l"
+#line 93 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.dissolveInterpolation,OBJParsertext);return DISSOLVE_INTERPOLATION;}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 97 "scanner.l"
+#line 94 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.levelOfDetail,OBJParsertext);return LEVEL_OF_DETAIL;}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 98 "scanner.l"
+#line 95 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.materialName,OBJParsertext);return MATERIAL_NAME;}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 99 "scanner.l"
+#line 96 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.materialLibrary,OBJParsertext);return MATERIAL_LIBRARY;}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 100 "scanner.l"
+#line 97 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.shadowCasting,OBJParsertext);return SHADOW_CASTING;}
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 101 "scanner.l"
+#line 98 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.rayTracing,OBJParsertext);return RAY_TRACING;}
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 102 "scanner.l"
+#line 99 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.curveApproxTechnique,OBJParsertext);return CURVE_APPROX_TECHNIQUE;}
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 103 "scanner.l"
+#line 100 "scanner.l"
 {/*printf("%s",OBJParsertext);*/strcpy(OBJParserlval.surfaceApproxTechnique,OBJParsertext);return SURFACE_APPROX_TECHNIQUE;}
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 104 "scanner.l"
+#line 101 "scanner.l"
 {printf("FLEX warning(unexpected character): ignoring ");ECHO;printf("\n");}
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 105 "scanner.l"
+#line 102 "scanner.l"
 ECHO;
 	YY_BREAK
-#line 1072 "OBJParser.lex.cpp"
+#line 1069 "OBJParser.lex.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2062,7 +2059,7 @@ void OBJParserfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 105 "scanner.l"
+#line 102 "scanner.l"
 
 
 

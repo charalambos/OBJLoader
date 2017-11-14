@@ -1,11 +1,11 @@
-///////////////////////////////////////////////////////////////////////////////////////
-/// Copyright © Charalambos "Charis" Poullis, charalambos@poullis.org               ///
-/// http://www.poullis.org                                                          ///
-/// This work is under the Creative Commons Attribution-Noncommercial-Share         ///
-/// Alike 3.0 United States License:                                                ///
-/// http://creativecommons.org/licenses/by-nc-sa/3.0/us/                            ///
-///////////////////////////////////////////////////////////////////////////////////////
 
+///IMPORTANT: If you use this software, YOU MUST CITE the following in any resulting publication/software:
+///@article{2017_POULLIS_OBJPARSER,
+///  title={A robust OBJParser using Customized Lexical Analyzer and Parser},
+///  author={Poullis, Charalambos},
+///  journal={Immersive and Creative Technologies Lab, Technical Report 02, 2017 - ICT-TR-2017-02},
+///  year={2017}
+///}
 
 ///This is a robust OBJ loader based on LEX for lexical analysis and YACC for parsing.
 ///I initially wrote this because of the different variations of the OBJ files available
@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 	obj_model->Print();
 	printf("<------------------------------->\n");
 
-	//cleanup
+	//cleanup (only if you don't plan on using the same data structure to store the geometry and topology information).
 	delete obj_model;
 
   	return EXIT_SUCCESS;

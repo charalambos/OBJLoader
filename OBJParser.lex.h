@@ -314,7 +314,7 @@ extern int OBJParserlex (void);
 #undef YY_DECL
 #endif
 
-#line 105 "scanner.l"
+#line 102 "scanner.l"
 
 
 #line 321 "OBJParser.lex.h"
