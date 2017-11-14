@@ -19,8 +19,6 @@ This is a robust OBJ loader based on LEX for lexical analysis and YACC for parsi
 ```
 
 ## Dependencies:
--Eigen3
-
--Flex (lexical analyzer)
-
--Bison (parser)
+* Eigen3
+* Flex (lexical analyzer)
+* Bison (parser)
