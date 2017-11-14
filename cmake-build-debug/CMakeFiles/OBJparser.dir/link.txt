@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/OBJparser.dir/main.cpp.o CMakeFiles/OBJparser.dir/OBJ.cpp.o CMakeFiles/OBJparser.dir/OBJParser.lex.cpp.o CMakeFiles/OBJparser.dir/OBJParser.yacc.cpp.o  -o OBJparser -lfl 
