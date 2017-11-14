@@ -8,20 +8,15 @@ This is a robust OBJ loader based on LEX for lexical analysis and YACC for parsi
 
 ##IMPORTANT: If you use this software, YOU MUST CITE the following in any resulting publication/software:
 
+```
 @article{2017_POULLIS_OBJPARSER,
-
   title={A robust OBJParser using Customized Lexical Analyzer and Parser},
-
   author={Poullis, Charalambos},
-
   journal={Immersive and Creative Technologies Lab, Technical Report 02, 2017 -
-
   ICT-TR-2017-02},
-
   year={2017}
-
 }
-
+```
 ##Dependencies:
 -Eigen3
 
