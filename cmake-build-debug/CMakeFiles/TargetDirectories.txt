@@ -1,0 +1,3 @@
+/home/charalambos/Documents/CODE/GITHUB_PROJECTS/OBJparser/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/charalambos/Documents/CODE/GITHUB_PROJECTS/OBJparser/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/charalambos/Documents/CODE/GITHUB_PROJECTS/OBJparser/cmake-build-debug/CMakeFiles/OBJparser.dir
