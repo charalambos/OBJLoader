@@ -1,4 +1,4 @@
-# OBJParser: A C++ implementation of a robust OBJ loader using a Lexical Analyzer and Parser 
+# OBJ file loader: A C++ implementation of a robust OBJ loader using a Lexical Analyzer(flex) and Parser (bison)
 
 #### Author: Charalambos Poullis
 
