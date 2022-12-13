@@ -1,5 +1,5 @@
 
-///IMPORTANT: If you use this software, YOU MUST CITE the following in any resulting publication/software:
+///IMPORTANT: If you use this software, please consider citing the following in any resulting publication/software:
 ///@article{2017_POULLIS_OBJPARSER,
 ///  title={A robust OBJParser using Customized Lexical Analyzer and Parser},
 ///  author={Poullis, Charalambos},
@@ -22,27 +22,33 @@
 
 
 ///Flex compiled using:
-///flex --header-file=OBJParser.lex.h -o OBJParser.lex.cpp scanner.l
+///flex --header-file=OBJLoader.lex.h -o OBJLoader.lex.cpp scanner.l
 
 ///Yacc compiled using:
-///bison -o OBJParser.yacc.cpp -d parser.y
+///bison -o OBJLoader.yacc.cpp -d parser.y
 
 #include <fstream>
 #include <iostream>
+#include <filesystem>
 
-#include "OBJParser.h"
-#include "OBJParser.lex.h"
-#include "OBJParser.yacc.hpp"
+#include "OBJLoader.h"
+#include "OBJLoader.lex.h"
+#include "OBJLoader.yacc.hpp"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
 	
-	std::string file_name;
-    //get the filename
-    std::cout << "Enter the OBJ file name: ";
-    std::cin >> file_name;
+	std::string file_name = "../cow-nonormals.obj";  /// <<<----- CHANGE FILENAME
+    std::cout << "Opening file: " << file_name << std::endl;
+
+    //check if it exists
+    std::filesystem::path f{file_name};
+    if (!std::filesystem::exists(f))  {
+      std::cout << "File not found. Exiting." << std::endl;
+      return -1;
+    }
 
     ///Read in all the contents of the file
     std::ifstream ifs(file_name);
@@ -51,24 +57,24 @@ int main(int argc, char *argv[])
 
     //If you want to debug through the code you can pass the data as a string
     //and the parser will parse the string instead of the file like below:
-    //YY_BUFFER_STATE buf = OBJParser_scan_string("v 1.0 1.0 1.0\n");
+    //YY_BUFFER_STATE buf = OBJLoader_scan_string("v 1.0 1.0 1.0\n");
 
     //Otherwise set the file pointer as the input stream to the parser
     //Set the stream as the input to the parser
-    YY_BUFFER_STATE buf = OBJParser_scan_string(content.c_str());
+    YY_BUFFER_STATE buf = OBJLoader_scan_string(content.c_str());
 
     ///initialize the OBJ
     obj_model = new OBJ();
 
     ///If you would like to run only the scanner then uncomment the following command
-//    OBJParserlex();
+//    OBJLoaderlex();
 
     ///This runs the parser
-    OBJParserparse();
+    OBJLoaderparse();
 
     ///Clean up
-    OBJParser_delete_buffer(buf);
-    OBJParserlex_destroy();
+    OBJLoader_delete_buffer(buf);
+    OBJLoaderlex_destroy();
 
 	//Show what you got. This is for debugging.
 	printf("<------- PRINTING OUT ---------->\n");

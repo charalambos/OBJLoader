@@ -1,4 +1,4 @@
-%define api.prefix OBJParser
+%define api.prefix {OBJLoader}
 %{
 //////////////////////////////////////////////////////////////////////////////////////
 // Copyright © Charalambos "Charis" Poullis, charalambos@poullis.org                //
@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <string>
-#include "OBJParser.h"
+#include "OBJLoader.h"
 #include "OBJ.h"
 
 extern char *yytext;         // The text of most recent token from the scanner.

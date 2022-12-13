@@ -1,20 +1,20 @@
 cmake_minimum_required(VERSION 3.8)
-project(OBJparser)
+project(OBJLoader)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCE_FILES
         main.cpp
         OBJ.cpp
         OBJ.h
-        OBJParser.h
-        OBJParser.lex.h
-        OBJParser.lex.cpp
-        OBJParser.yacc.hpp
-        OBJParser.yacc.cpp)
+        OBJLoader.h
+        OBJLoader.lex.h
+        OBJLoader.lex.cpp
+        OBJLoader.yacc.hpp
+        OBJLoader.yacc.cpp)
 
 include_directories(.)
 include_directories(/usr/include/eigen3)
 
-add_executable(OBJparser ${SOURCE_FILES})
-target_link_libraries(OBJparser -lfl)
+add_executable(OBJLoader ${SOURCE_FILES})
+target_link_libraries(OBJLoader)
